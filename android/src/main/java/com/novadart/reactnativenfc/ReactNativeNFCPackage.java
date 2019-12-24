@@ -11,20 +11,15 @@ import java.util.Collections;
 import java.util.List;
 
 public class ReactNativeNFCPackage implements ReactPackage {
-    @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>(1);
         modules.add(new ReactNativeNFCModule(reactContext));
         return modules;
     }
-
-    // Deprecated RN 0.47
-    // @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
 
-    @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
